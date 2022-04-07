@@ -268,7 +268,8 @@ strong {
 }
 
 .card-popular-img {
-  width: 38%;
+  max-width: 38%;
+  min-width: 120px;
 }
 
 .card-accommodation-img img,
@@ -594,11 +595,11 @@ strong {
   /* .coeur-de-eau */
 
   .card-popular-rating i {
-    margin-top: 60px;
+    margin-top: 70px;
   }
 
-  .coeur-de-eau .card-popular-rating i {
-    margin-top: 40px;
+  .coeur-de-eau i {
+    margin-top: 50px;
   }
 }
 
@@ -660,12 +661,6 @@ strong {
 }
 
 @media (max-width: 768px) {
-  /* .popular-info,
-  .all-card-popular {
-    padding-left: 20px;
-    padding-right: 20px;
-  } */
-
   /* Header */
   .header-wrapper {
     flex-direction: column;
@@ -694,10 +689,6 @@ strong {
   }
 
   /* search bar */
-
-  /* .search__area-search-bar {
-    margin-left: 0;
-  } */
 
   .search-form .btn-glass {
     display: block;
@@ -746,6 +737,10 @@ strong {
 
   .popular-info {
     padding-left: 0;
+  }
+
+  .card-popular-rating i {
+    margin-top: 50px;
   }
 
   .card-popular,
@@ -801,14 +796,6 @@ strong {
 }
 
 @media (max-width: 470px) {
-  .card-popular-rating i {
-    margin-top: 40px;
-  }
-
-  .coeur-de-eau .card-popular-rating i {
-    margin-top: 30px;
-  }
-
   .activities,
   .section-accommodations,
   .aside-popular,
