@@ -17,6 +17,9 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 strong {
@@ -32,15 +35,22 @@ strong {
 } */
 
 /* ------HEADER-------- */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  width: 100%;
+  padding: 15px 50px;
   /* margin-bottom: 30px; */
   /* margin: 0 auto; */
-  margin-right: 40px;
-  margin-left: 40px;
+  /* margin-right: 40px;
+  margin-left: 40px; */
 }
 
 .logo img {
@@ -72,9 +82,12 @@ strong {
 }
 
 /* -------Search & filter ------ */
+.search-wrapper {
+  width: 100%;
+}
 .search__area {
-  margin-right: 40px;
-  margin-left: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .search__area-info h2 {
@@ -88,7 +101,9 @@ strong {
 
 /* search bar */
 .search__area-search-bar {
-  max-width: 500px;
+  max-width: 430px;
+  /* max-width: 500px; */
+  width: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -96,6 +111,7 @@ strong {
 
 .search-form {
   display: flex;
+  margin-right: auto;
 }
 
 .search-form input {
@@ -105,7 +121,7 @@ strong {
   outline: none;
   padding: 15px 20px;
   font-weight: 700;
-  max-width: 250px;
+  max-width: 220px;
 }
 
 .search-form .btn {
@@ -327,8 +343,8 @@ strong {
 .accommodations-popular-set-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-right: 40px;
-  margin-left: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .section-accommodations,
@@ -392,8 +408,8 @@ strong {
 
 .activities {
   margin-bottom: 35px;
-  margin-right: 40px;
-  margin-left: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .activities-container {
@@ -469,14 +485,19 @@ strong {
 
 .footer {
   background-color: var(--clr-grey);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-container {
   display: flex;
-  padding: 20px 40px;
-  /* margin-right: 40px;
-  margin-left: 40px; */
-  /* padding-bottom: 20px; */
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .footer-element {
@@ -581,7 +602,17 @@ strong {
   }
 }
 
+@media (max-width: 1040px) {
+  .all-card-popular {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 992px) {
+  /* accommodations et popular */
+
   .accommodation-popular-set {
     flex-direction: column;
   }
@@ -597,12 +628,6 @@ strong {
 
   .all-accommodations {
     justify-content: space-evenly;
-  }
-
-  .all-card-popular {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   /* activities */
@@ -670,9 +695,9 @@ strong {
 
   /* search bar */
 
-  .search__area-search-bar {
+  /* .search__area-search-bar {
     margin-left: 0;
-  }
+  } */
 
   .search-form .btn-glass {
     display: block;
@@ -690,8 +715,8 @@ strong {
   /* cards section & aside design */
 
   .accommodations-popular-set-wrapper {
-    margin-right: 0;
-    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .accommodation-popular-set {
@@ -723,18 +748,22 @@ strong {
     padding-left: 0;
   }
 
+  .card-popular,
+  .card-accommodation {
+    max-width: 340px;
+  }
+
   .section-accommodations {
     background-color: #fff;
   }
 
   .card-accommodation {
     width: 100%;
-    max-width: 350px;
     height: 190px;
   }
 
   .all-accommodations {
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
   }
 
@@ -744,7 +773,7 @@ strong {
   }
 
   .activity {
-    width: 350px;
+    width: 340px;
   }
 
   .large img,
@@ -761,6 +790,10 @@ strong {
     margin-top: 0px;
   }
 
+  .activities-container {
+    justify-content: center;
+  }
+
   /* footer */
   .footer-container {
     flex-direction: column;
@@ -768,15 +801,20 @@ strong {
 }
 
 @media (max-width: 470px) {
-  /* .aside-popular {
-    padding: 10px;
-  } */
-
   .card-popular-rating i {
     margin-top: 40px;
   }
 
   .coeur-de-eau .card-popular-rating i {
     margin-top: 30px;
+  }
+
+  .activities,
+  .section-accommodations,
+  .aside-popular,
+  .search__area,
+  .footer-container {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
