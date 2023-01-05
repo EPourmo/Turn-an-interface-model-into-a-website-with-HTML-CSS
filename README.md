@@ -7,7 +7,7 @@
 
 This project is part of OpenClassrooms "Développeur d'application - JavaScript React" training.
 
-The goal of this project is to reproduce a site in only HTML and CSS.
+The goal of this project is to reproduce a site in only HTML and CSS (static website).
 
 This site is responsive.
 
